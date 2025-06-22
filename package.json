@@ -1,11 +1,8 @@
 {
   "name": "@orengrinker/jira-mcp-server",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A comprehensive Model Context Protocol server for Jira integration with issue management, board operations, time tracking, and project management capabilities",
   "main": "dist/index.js",
-  "bin": {
-    "jira-mcp-server": "dist/index.js"
-  },
   "type": "module",
   "scripts": {
     "build": "npm run clean && tsc && chmod +x dist/index.js",
@@ -39,7 +36,8 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.5.0"
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
