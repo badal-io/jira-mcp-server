@@ -23,6 +23,10 @@ A comprehensive, production-ready Model Context Protocol (MCP) server for seamle
 - **Rich Formatting**: Beautiful markdown tables and formatted responses
 - **Advanced Search**: Support for complex JQL queries with helpful examples
 
+## 📜 Project Constitution
+
+This project is governed by a constitution that outlines our core development principles. All contributions should adhere to these principles. You can read the full constitution here: [.specify/memory/constitution.md](.specify/memory/constitution.md).
+
 ## 🛠️ Requirements
 
 - **Node.js**: 18.0.0 or higher
@@ -42,48 +46,30 @@ LOG_LEVEL=INFO  # Optional: ERROR, WARN, INFO, DEBUG
 
 ## 🚀 Quick Start
 
-### Option 1: Using npx (Recommended)
+### Using with npx from GitHub Packages
+
+To use the server directly from the GitHub Package Registry, you need to configure your `.npmrc` file to authenticate with GitHub Packages.
+
+**1. Configure `.npmrc`**
+
+Add the following line to your `~/.npmrc` file:
+```
+@orengrinker:registry=https://npm.pkg.github.com/
+```
+
+**2. Run with `npx`**
+
+You can then run the server using `npx`. You will need a GitHub Personal Access Token with the `read:packages` scope.
 
 ```bash
-# Run directly without installation
-npx @orengrinker/jira-mcp-server
-
-# With environment variables
-JIRA_BASE_URL=https://company.atlassian.net \
-JIRA_EMAIL=user@company.com \
-JIRA_API_TOKEN=your-token \
+JIRA_BASE_URL=https://your-company.atlassian.net \
+JIRA_EMAIL=your-email@company.com \
+JIRA_API_TOKEN=your-jira-api-token \
+NODE_AUTH_TOKEN=your-github-token \
 npx @orengrinker/jira-mcp-server
 ```
 
-### Option 2: Claude Desktop Configuration
-
-Add to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "jira": {
-      "command": "npx",
-      "args": ["@orengrinker/jira-mcp-server"],
-      "env": {
-        "JIRA_BASE_URL": "https://your-company.atlassian.net",
-        "JIRA_EMAIL": "your-email@company.com",
-        "JIRA_API_TOKEN": "your-jira-api-token",
-        "LOG_LEVEL": "INFO"
-      }
-    }
-  }
-}
-```
-
-### Option 3: Global Installation
-
-```bash
-npm install -g @orengrinker/jira-mcp-server
-jira-mcp-server
-```
-
-### Option 4: Local Development
+### Local Development
 
 ```bash
 git clone https://github.com/OrenGrinker/jira-mcp-server.git
@@ -266,11 +252,11 @@ src/
 3. **Network Errors**
    - Verify your Jira base URL is accessible
    - Check firewall and proxy settings
-   - Ensure you're using HTTPS
+   - Ensure you\\'re using HTTPS
 
 4. **Rate Limiting**
    - The server includes built-in rate limiting
-   - If you hit Jira's rate limits, wait and retry
+   - If you hit Jira\'s rate limits, wait and retry
    - Consider reducing concurrent requests
 
 ### Debug Mode
@@ -296,7 +282,7 @@ We welcome contributions! Please follow these guidelines:
 
 1. **Fork the repository**
 2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes** following our coding standards
+3. **Make your changes** following our coding standards and the project [constitution](.specify/memory/constitution.md)
 4. **Add tests** for new functionality
 5. **Run the build**: `npm run build`
 6. **Commit changes**: `git commit -m 'Add amazing feature'`
@@ -348,3 +334,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with the [Model Context Protocol SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 - Inspired by the MCP community and best practices
 - Thanks to all contributors and users providing feedback
+We welcome contributions! Please follow these guidelines:
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
+3. **Make your changes** following our coding standards and the project [constitution](.specify/memory/constitution.md)
+4. **Add tests** for new functionality
+5. **Run the build**: `npm run build`
+6. **Commit changes**: `git commit -m 'Add amazing feature'`
+7. **Push to branch**: `git push origin feature/amazing-feature`
+8. **Open a Pull Request**
