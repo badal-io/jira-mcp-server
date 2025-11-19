@@ -38,8 +38,8 @@ This project is governed by a constitution that outlines our core development pr
 Create a `.env` file or set these environment variables:
 
 ```bash
-JIRA_BASE_URL=https://your-company.atlassian.net
-JIRA_EMAIL=your-email@company.com
+JIRA_BASE_URL=https://badal.atlassian.net
+JIRA_EMAIL=your-email@badal.io
 JIRA_API_TOKEN=your-jira-api-token
 LOG_LEVEL=INFO  # Optional: ERROR, WARN, INFO, DEBUG
 ```
@@ -54,7 +54,7 @@ To use the server directly from the GitHub Package Registry, you need to configu
 
 Add the following line to your `~/.npmrc` file:
 ```
-@orengrinker:registry=https://npm.pkg.github.com/
+@badal-io:registry=https://npm.pkg.github.com/
 ```
 
 **2. Run with `npx`**
@@ -62,17 +62,17 @@ Add the following line to your `~/.npmrc` file:
 You can then run the server using `npx`. You will need a GitHub Personal Access Token with the `read:packages` scope.
 
 ```bash
-JIRA_BASE_URL=https://your-company.atlassian.net \
-JIRA_EMAIL=your-email@company.com \
+JIRA_BASE_URL=https://badal.atlassian.net \
+JIRA_EMAIL=your-email@badal.io \
 JIRA_API_TOKEN=your-jira-api-token \
 NODE_AUTH_TOKEN=your-github-token \
-npx @orengrinker/jira-mcp-server
+npx @badal-io/jira-mcp-server
 ```
 
 ### Local Development
 
 ```bash
-git clone https://github.com/OrenGrinker/jira-mcp-server.git
+git clone https://github.com/badal-io/jira-mcp-server.git
 cd jira-mcp-server
 npm install
 npm run build
@@ -132,18 +132,18 @@ Once configured with Claude Desktop, you can use natural language commands:
 ```bash
 # List all boards
 npx @modelcontextprotocol/inspector \
-  npx @orengrinker/jira-mcp-server \
+  npx @badal-io/jira-mcp-server \
   get_boards
 
 # Search for your issues
 npx @modelcontextprotocol/inspector \
-  npx @orengrinker/jira-mcp-server \
+  npx @badal-io/jira-mcp-server \
   search_issues \
   '{"jql": "assignee=currentUser() AND status!=Done"}'
 
 # Create a new issue
 npx @modelcontextprotocol/inspector \
-  npx @orengrinker/jira-mcp-server \
+  npx @badal-io/jira-mcp-server \
   create_issue \
   '{"projectKey": "PROJ", "issueType": "Task", "summary": "New task from MCP"}'
 ```
@@ -197,7 +197,7 @@ Your Jira user should have:
 ### Setup
 
 ```bash
-git clone https://github.com/OrenGrinker/jira-mcp-server.git
+git clone https://github.com/badal-io/jira-mcp-server.git
 cd jira-mcp-server
 npm install
 ```
@@ -270,7 +270,7 @@ export LOG_LEVEL=DEBUG
 
 ```bash
 # Test the server connection
-JIRA_BASE_URL=https://your-company.atlassian.net \
+JIRA_BASE_URL=https://badal.atlassian.net \
 JIRA_EMAIL=your@email.com \
 JIRA_API_TOKEN=your-token \
 node dist/index.js
@@ -317,15 +317,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- **GitHub Repository**: [https://github.com/OrenGrinker/jira-mcp-server](https://github.com/OrenGrinker/jira-mcp-server)
-- **NPM Package**: [@orengrinker/jira-mcp-server](https://www.npmjs.com/package/@orengrinker/jira-mcp-server)
+- **GitHub Repository**: [https://github.com/badal-io/jira-mcp-server](https://github.com/badal-io/jira-mcp-server)
+- **NPM Package**: [@badal-io/jira-mcp-server](https://www.npmjs.com/package/@badal-io/jira-mcp-server)
 - **Jira Cloud REST API**: [Documentation](https://developer.atlassian.com/cloud/jira/platform/rest/v3/)
 - **Model Context Protocol**: [Specification](https://modelcontextprotocol.io/)
 - **Create API Tokens**: [Atlassian Guide](https://id.atlassian.com/manage-profile/security/api-tokens)
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/OrenGrinker/jira-mcp-server/issues)
+- **Issues**: [GitHub Issues](https://github.com/badal-io/jira-mcp-server/issues)
 - **Documentation**: Check this README and inline code documentation
 - **Feature Requests**: Open an issue with the "enhancement" label
 

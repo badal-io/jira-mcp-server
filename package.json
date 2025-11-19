@@ -1,5 +1,5 @@
 {
-  "name": "@orengrinker/jira-mcp-server",
+  "name": "@badal-io/jira-mcp-server",
   "version": "1.0.3",
   "description": "A comprehensive Model Context Protocol server for Jira integration with issue management, board operations, time tracking, and project management capabilities",
   "main": "dist/index.js",
@@ -22,16 +22,16 @@
     "claude",
     "automation"
   ],
-  "author": "Oren Grinker",
+  "author": "Badal.io",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OrenGrinker/jira-mcp-server.git"
+    "url": "https://github.com/badal-io/jira-mcp-server.git"
   },
   "bugs": {
-    "url": "https://github.com/OrenGrinker/jira-mcp-server/issues"
+    "url": "https://github.com/badal-io/jira-mcp-server/issues"
   },
-  "homepage": "https://github.com/OrenGrinker/jira-mcp-server#readme",
+  "homepage": "https://github.com/badal-io/jira-mcp-server#readme",
   "engines": {
     "node": ">=16.0.0"
   },

@@ -12,7 +12,7 @@ This guide explains how to use the `jira-mcp-server` package from the GitHub Pac
 To download packages from the GitHub Package Registry, you need to authenticate. Add the following line to your `.npmrc` file:
 
 ```
-@orengrinker:registry=https://npm.pkg.github.com/
+@badal-io:registry=https://npm.pkg.github.com/
 ```
 
 You also need to provide an access token with `read:packages` scope. You can do this by setting the `NODE_AUTH_TOKEN` environment variable.
@@ -22,11 +22,11 @@ You also need to provide an access token with `read:packages` scope. You can do 
 You can run the server directly using `npx`:
 
 ```bash
-JIRA_BASE_URL=https://your-company.atlassian.net \
-JIRA_EMAIL=your-email@company.com \
+JIRA_BASE_URL=https://badal.atlassian.net \
+JIRA_EMAIL=your-email@badal.io \
 JIRA_API_TOKEN=your-jira-api-token \
 NODE_AUTH_TOKEN=your-github-token \
-npx @orengrinker/jira-mcp-server
+npx @badal-io/jira-mcp-server
 ```
 
 ## 3. Using with `npm`
@@ -38,7 +38,7 @@ You can install the package in your project:
 export NODE_AUTH_TOKEN=your-github-token
 
 # Install the package
-npm install @orengrinker/jira-mcp-server
+npm install @badal-io/jira-mcp-server
 ```
 
 Then, you can run it from your `node_modules`:

@@ -6,7 +6,7 @@ export function validateEnvironment(): void {
     throw new Error(
       `Missing required environment variables: ${missing.join(', ')}\n` +
       'Please set the following environment variables:\n' +
-      '- JIRA_BASE_URL: Your Jira instance URL (e.g., https://company.atlassian.net)\n' +
+      '- JIRA_BASE_URL: Your Jira instance URL (e.g., https://badal.atlassian.net)\n' +
       '- JIRA_EMAIL: Your Jira account email\n' +
       '- JIRA_API_TOKEN: Your Jira API token (create at https://id.atlassian.com/manage-profile/security/api-tokens)'
     );
@@ -17,7 +17,7 @@ export function validateEnvironment(): void {
   try {
     new URL(baseUrl);
   } catch {
-    throw new Error(`Invalid JIRA_BASE_URL format: ${baseUrl}. Please provide a valid URL (e.g., https://company.atlassian.net)`);
+    throw new Error(`Invalid JIRA_BASE_URL format: ${baseUrl}. Please provide a valid URL (e.g., https://badal.atlassian.net)`);
   }
 
   // Validate email format
