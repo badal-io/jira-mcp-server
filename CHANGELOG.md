@@ -1,3 +1,5 @@
+## [1.0.9](https://github.com/badal-io/jira-mcp-server/compare/v1.0.8...v1.0.9) (2025-11-19)
+
 ## [1.0.5](https://github.com/badal-io/jira-mcp-server/compare/v1.0.4...v1.0.5) (2025-11-19)
 
 
