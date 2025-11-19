@@ -1,0 +1,28 @@
+# Tests
+tests/
+coverage/
+.nyc_output/
+
+# Config files
+.claude/
+.claude-flow/
+.gemini/
+.hive-mind/
+.specify/
+.swarm/
+.eslintignore
+.eslintrc.json
+.prettierignore
+.prettierrc
+.gitignore
+tsconfig.json
+GEMINI.md
+CLAUDE.md
+
+# Specs
+specs/
+
+# Development
+*.tgz
+*.log
+.env*
