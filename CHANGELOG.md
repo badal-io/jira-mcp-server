@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/badal-io/jira-mcp-server/compare/v1.0.0...v1.0.1) (2025-11-19)
+
+
+### Bug Fixes
+
+* **semantic-release:** default to patch release ([563bab1](https://github.com/badal-io/jira-mcp-server/commit/563bab1bf24d10ef249e30ef98d6219f4deace73))
+
 # 1.0.0 (2025-11-19)
 
 
